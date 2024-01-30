@@ -1,48 +1,43 @@
-.hero {
+.container {
   background: linear-gradient(113.96deg, #0090BD 13.6%, #140023 88.15%);
   background-color: transparent;
+  height: 100vh;
+  width:100%;
+  
+ 
+  
 }
 
 .hero-body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.container {
-  max-width: 1200px;
-}
-
-
-.left-column {
-  padding: 0;
 }
 
 .login-image {
   display: flex;
   justify-content: center;
-  align-items: center;
+ 
 }
 
 .login-image img {
-  max-width: 70%;
+  max-width: 80%;
+  height: auto;
+  display: block; /* Ensures the image doesn't have extra spacing below */
+}
+.login-image1 {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.login-image1 img {
+  max-width: 50%;
   height: auto;
   display: block; /* Ensures the image doesn't have extra spacing below */
 }
 
-.box {
-  background-color: #ffffff;
-  border-radius: 60px 0 0 60px;
-  
-  
-}
-
-
-.right-column {
-  width:  100%;
-
-  
-}
 
 .title {
   color: #333333;
@@ -89,9 +84,7 @@
   /* Adjust the color as needed */
 }
 .radio-field {
-  
-
-  margin-bottom: 20px; 
+   margin-bottom: 20px; 
    
 }
 
@@ -121,4 +114,17 @@
   width: 85%;
  
   /* Center the button within the container */
+}
+.left-column{
+   justify-content: center;
+   
+}
+.right-column{
+  border-radius: 60px 0 0 60px;
+}
+.box{
+  width:520px;
+  border-radius: 60px 0 0 60px;
+  padding-top: 111px;
+  padding-left:fixed;
 }

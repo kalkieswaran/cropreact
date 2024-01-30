@@ -51,7 +51,7 @@ const SiteRoute = () => {
   const loginLayoutChildren = () => {
     return (
       <LoginLayout >        
-        <Signup />
+        <Login />
       </LoginLayout>
     );
   };

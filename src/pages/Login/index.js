@@ -53,19 +53,18 @@ const Login = () => {
   };
 
   return (
-    <section className="hero is-fullheight">
-      <div className="hero-body">
+    
         <div className="container">
           <div className="columns is-vcentered">
-            <div className="left-column is-6 ">
+            <div className="left-column is-6  ">
               <figure className="login-image ">
                 <img src={LOGIN_lOGO} alt="Login Logo" />
               </figure>
             </div>
-            <div className='login-part'>
-            <div className="right-column  is-6  ">
+           
+            <div className="right-column  is-6 ">
               <div className="box">
-                <figure className="login-image">
+                <figure className="login-image1">
                   <img src={croplogo} alt="Crop Logo" />
                 </figure>
                 <h1 className="title is-4">Login</h1>
@@ -125,9 +124,7 @@ const Login = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+       
 );
   };
 
