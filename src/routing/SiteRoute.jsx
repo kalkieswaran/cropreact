@@ -16,6 +16,7 @@ import TableExample from "../pages/examples/TableExample";
 import SelectBoxExample from "../pages/examples/SelectBoxExample";
 import ModalExample from "../pages/examples/ModalExample";
 import Forgetpin from "../pages/Login/Forgetpin";
+import HomeButtons from "../pages/Home/HomeButtons";
 
 const SiteRoute = () => {
   const isAuthenticated = true;
@@ -71,6 +72,8 @@ const SiteRoute = () => {
             path="/examples/*"
             element={ exampleRoutes()}
           />
+
+          <Route path="/home-button" element={<HomeButtons />} />
           
         </Routes>
       </Router>

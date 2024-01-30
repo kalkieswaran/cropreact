@@ -28,14 +28,14 @@ const Login = () => {
  
   return (
 
-    <div className="container">
+    <div className="container login-container is-fullhd ">
       <div className="columns is-vcentered mt-2">
-        <div className="left-column is-6  ">
+        <div className="left-column column is-6  ">
           <figure className="login-image ">
             <img src={LOGIN_lOGO} alt="Login Logo" />
           </figure>
         </div>
-        <div className="right-column  is-6 ">
+        <div className="right-column column  is-6 ">
           <div className="box mb-3">
             <figure className="login-image1  mt-2 is-126*126 ">
               <img src={croplogo} alt="Crop Logo" />

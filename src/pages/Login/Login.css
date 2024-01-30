@@ -128,7 +128,16 @@
   }
 
   .right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    margin-bottom: 2rem;
+    
   }
+}
+
+.login-container{
+  background: linear-gradient(114deg, #0090BD 13.6%, #140023 88.15%);
+
+
 }
