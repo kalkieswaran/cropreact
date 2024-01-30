@@ -15,6 +15,7 @@ import TextBoxExample from "../pages/examples/TextBoxExample";
 import TableExample from "../pages/examples/TableExample";
 import SelectBoxExample from "../pages/examples/SelectBoxExample";
 import ModalExample from "../pages/examples/ModalExample";
+import Forgetpin from "../pages/Login/Forgetpin";
 
 const SiteRoute = () => {
   const isAuthenticated = true;
@@ -42,6 +43,7 @@ const SiteRoute = () => {
           <Route path="/newform" element={<Pdfform/>} />
           <Route path="/pdfcal" element={<PdfCalendar/>} />
           <Route path="/signup" element={<Signup/>} />
+          <Route path="/forgetpin" element={<Forgetpin/>} />
           <Route path="/SmartLogin" element={<SmartLogin/>} />
         </Routes>
       </MainLayout>
@@ -51,7 +53,7 @@ const SiteRoute = () => {
   const loginLayoutChildren = () => {
     return (
       <LoginLayout >        
-        <Login />
+        <Login/>
       </LoginLayout>
     );
   };
