@@ -4,10 +4,10 @@ import { post } from '../../services/smartApiService';
 import { Link, useNavigate } from 'react-router-dom';
 import croplogo from '../../assets/images/croplogo.png';
 import './Login.css'; // You can remove this if not needed
-import  signup  from '../../assets/images/signup.png';
+import  forget  from '../../assets/images/forget.png';
 
 
-const Signup = () => {
+const Forgetpin = () => {
   const { setLoading, setUser, openModal, closeModal, startSessionAct } = useSiteContext();
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
@@ -57,8 +57,8 @@ const Signup = () => {
     <div className="container">
       <div className="columns is-vcentered">
         <div className="left-column is-6  ">
-          <figure className="signup-image ">
-            <img src={signup} alt="Login Logo" />
+          <figure className="login-image ">
+            <img src={forget} alt="Login Logo" />
           </figure>
         </div>
         <div className="right-column  is-6 ">
@@ -66,12 +66,15 @@ const Signup = () => {
             <figure className="login-image1">
               <img src={croplogo} alt="Crop Logo" />
             </figure><br/>
-            <h1 className="title is-4">Sign Up</h1>
-            <p className="title is-6">Enter  Your Credentials to Continue</p>
+            <h1 className="title is-4">Forget Pin</h1>
+           
             <form onSubmit={handleLogin}>
               <div className="radio-field">
                 <div className="radio-control">
-                 
+                <label className="radio-label">
+                    <input type="radio" name="loginMethod" />
+                    Crop ID
+                  </label>
                   <label className="radio-label">
                     <input type="radio" name="loginMethod" />
                     Mobile
@@ -80,30 +83,29 @@ const Signup = () => {
                     Email
                   </label>
                 </div>
-              </div>
+              </div><br/>
                <div className="field">
                 <div className="control">
                   <input
                     className="input"
-                    type="number"
-                    placeholder="Mobile"
+                    type="password"
+                    placeholder="Crop ID"
                     value={password}
                     leftIcon="fa-lock"
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
-              </div>
+              </div><br/>
               <div className="button-field">
                 <div className="button-control">
                   <button className="button-button" type="submit">
-                    Send OTP
+                   Continue
                   </button>
                 </div><br/>
-                <div className="signup-field">
-             Already have an Account?<Link to="/" className="login-sign" onClick={handleSignup}> Login
+                <div className="field">
+             Already have an Account?<Link to="/" className="login-sign" onClick={handleSignup}> Back to Login
                 </Link>
                 </div>
-                
               </div>
 
             </form>
@@ -113,4 +115,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Forgetpin;

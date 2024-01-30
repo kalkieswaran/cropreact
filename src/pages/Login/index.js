@@ -49,86 +49,77 @@ const Login = () => {
   };
 
   const handleSignup = () => {
-    navigate('/signup');
+    navigate('/site/signup');
   };
 
   return (
-    <section className="hero is-fullheight">
-      <div className="hero-body">
-        <div className="container">
-          <div className="columns is-vcentered">
-            <div className="left-column is-6 ">
-              <figure className="login-image ">
-                <img src={LOGIN_lOGO} alt="Login Logo" />
-              </figure>
-            </div>
-            <div className='login-part'>
-            <div className="right-column  is-6  ">
-              <div className="box">
-                <figure className="login-image">
-                  <img src={croplogo} alt="Crop Logo" />
-                </figure>
-                <h1 className="title is-4">Login</h1>
-                <p className="title is-6">Your Access to the World of Customer Loyalty</p>
-                <form onSubmit={handleLogin}>
-                  <div className="radio-field">
-                    <div className="radio-control">
-                      <label className="radio-label">
-                        <input type="radio" name="loginMethod" />
-                        Crop ID
-                      </label>
-                      <label className="radio-label">
-                        <input type="radio" name="loginMethod" />
-                        Mobile
-                      </label>
-                      <label className="radio-label">
-                        <input type="radio" name="loginMethod" />
-                        Email
-                      </label>
-                    </div>
-                  </div>
-                  <div className="field">
-                    <div className="control">
-                      <input
-                        className="input"
-                        type="text"
-                        placeholder="Crop ID"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
-                  </div>
-                  <div className="field">
-                    <div className="control">
-                      <input
-                        className="input"
-                        type="password"
-                        placeholder="Pin"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                      />
-                    </div>
-                  </div>
-                  <div className="button-field">
-                    <div className="button-control">
-                      <button className="button-button" type="submit">
-                        Login
-                      </button>
-                    </div>
-                    <Link to="/signup" className="login-sign" onClick={handleSignup}>
-                      Not a Member? Signup Now
-                    </Link>
-                  </div>
-                  
-                </form>
+
+    <div className="login-container">
+      <div className="columns is-vcentered mt-2">
+        <div className="left-column is-6  ">
+          <figure className="login-image ">
+            <img src={LOGIN_lOGO} alt="Login Logo" />
+          </figure>
+        </div>
+        <div className="right-column  is-6 ">
+          <div className="box mb-3">
+            <figure className="login-image1  mt-2 is-126*126 ">
+              <img src={croplogo} alt="Crop Logo" />
+            </figure>
+            <h1 className="title is-4">Login</h1>
+            <p className="title is-6">Your Access to the World of Customer Loyalty</p>
+            <form onSubmit={handleLogin}>
+              <div className="radio-field">
+                <div className="radio-control">
+                  <label className="radio-label">
+                    <input type="radio" name="loginMethod" />
+                    Crop ID
+                  </label>
+                  <label className="radio-label">
+                    <input type="radio" name="loginMethod" />
+                    Mobile
+                  </label> <label className="radio-label">
+                    <input type="radio" name="loginMethod" />
+                    Email
+                  </label>
+                </div>
               </div>
+              <div className="field">
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    placeholder="Crop ID"
+                    value={email} onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div> </div> <div className="field">
+                <div className="control">
+                  <input
+                    className="input"
+                    type="password"
+                    placeholder="Pin"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
               </div>
-            </div>
+              <div className="button-field">
+                <div className="button-control">
+                  <button className="button-button" type="submit">
+                    Login
+                  </button>
+                </div>
+                <div className="field">
+               Not a Member?<Link to="/site/signup" className="login-sign" onClick={handleSignup}> Signup Now
+                </Link>
+                </div>
+              </div>
+
+            </form>
           </div>
         </div>
-      </div>
-    </section>
-);
-  };
+      </div> </div>
+  );
+};
 
 export default Login;

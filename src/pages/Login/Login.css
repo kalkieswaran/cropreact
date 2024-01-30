@@ -1,47 +1,42 @@
-.hero {
+.login-container {
   background: linear-gradient(113.96deg, #0090BD 13.6%, #140023 88.15%);
   background-color: transparent;
-}
-
-.hero-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  max-width: 1200px;
-}
-
-
-.left-column {
-  padding: 0;
+  height: 100vh;
+  width: 100%;
 }
 
 .login-image {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .login-image img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+}
+
+.signup-image {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-image img {
   max-width: 70%;
   height: auto;
-  display: block; /* Ensures the image doesn't have extra spacing below */
+  display: block;
 }
 
-.box {
-  background-color: #ffffff;
-  border-radius: 60px 0 0 60px;
-  
-  
+.login-image1 {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
 }
 
-
-.right-column {
-  width:  100%;
-
-  
+.login-image1 img {
+  max-width: 60%;
+  height: auto;
+  display: block;
 }
 
 .title {
@@ -86,29 +81,23 @@
 
 .title.is-6 {
   text-align: center;
-  /* Adjust the color as needed */
 }
+
 .radio-field {
-  
-
-  margin-bottom: 20px; 
-   
+  margin-bottom: 20px;
 }
-
 
 .radio-label {
-  margin-left: 40px; /* Adjust the margin between the radio button and its label */
+  margin-left: 40px;
 }
-.input::placeholder {
-  color:  #5590F4;
-   /* Adjust the color as needed */
-}
-.button-field {
-  border-radius:70%;
-  margin-bottom: 20px;
- 
 
- /* Add margin as needed */
+.input::placeholder {
+  color: #5590F4;
+}
+
+.button-field {
+  border-radius: 70%;
+  margin-bottom: 20px;
 }
 
 .button-control {
@@ -119,6 +108,26 @@
   border-radius: 60px;
   background-color: #58D1FC;
   width: 85%;
- 
-  /* Center the button within the container */
+}
+
+.box {
+  width: 520px;
+  border-radius: 60px 0 0 50px;
+  padding-top: 111px;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .left-column {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .right-column {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
