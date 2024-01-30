@@ -1,60 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { useSiteContext } from '../../contexts/SiteProvider';
 import { post } from '../../services/smartApiService';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import croplogo from '../../assets/images/croplogo.png';
 import './Login.css'; // You can remove this if not needed
 import { LOGIN_lOGO } from '../../services/ImageService';
 import Signup from './Signup';
 
 const Login = () => {
-  const { setLoading, setUser, openModal, closeModal, startSessionAct } = useSiteContext();
-  const navigate = useNavigate();
-  const [email, setEmail] = useState('');
+  const [cropid, setCropid] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    const data = { username: 'kminchelle', password: '0lelplR' };
-    setLoading(true, 'Logging in Please Wait....');
-    const subscription = post('auth/login', data).subscribe((response) => {
-      setUser(response.data);
-      setLoading(false);
-      startSessionAct();
-      navigate('/');
-    });
-    return () => {
-      subscription.unsubscribe();
-    };
-  };
-
-  const handleRememberMe = () => {
-    if (rememberMe) {
-      localStorage.setItem('rememberedEmail', email);
-    } else {
-      localStorage.removeItem('rememberedEmail');
-    }
-  };
-
-  useEffect(() => {
-    const rememberedEmail = localStorage.getItem('rememberedEmail');
-    if (rememberedEmail) {
-      setEmail(rememberedEmail);
-      setRememberMe(true);
-    }
-  }, []);
-
-  const handleForgetPassword = () => {
-    // Implement your forget password logic here
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Add your login logic here using cropid and password
+    console.log('Logging in...');
   };
 
   const handleSignup = () => {
-    navigate('/site/signup');
+    // Add your signup logic here
+    navigate("/site/signup")
+    console.log('Redirecting to signup...');
   };
 
+  
+ 
   return (
 
-    <div className="login-container">
+    <div className="container">
       <div className="columns is-vcentered mt-2">
         <div className="left-column is-6  ">
           <figure className="login-image ">
@@ -90,7 +64,7 @@ const Login = () => {
                     className="input"
                     type="text"
                     placeholder="Crop ID"
-                    value={email} onChange={(e) => setEmail(e.target.value)}
+                    value={cropid} onChange={(e) => setCropid(e.target.value)}
                   />
                 </div> </div> <div className="field">
                 <div className="control">

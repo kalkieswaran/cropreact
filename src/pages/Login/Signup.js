@@ -61,7 +61,7 @@ const Signup = () => {
             <img src={signup} alt="Login Logo" />
           </figure>
         </div>
-        <div className="right-column  is-6 ">
+        <div className="right-column  is-6 ml-6 ">
           <div className="box">
             <figure className="login-image1">
               <img src={croplogo} alt="Crop Logo" />

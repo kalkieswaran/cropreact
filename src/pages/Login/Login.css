@@ -1,4 +1,4 @@
-.login-container {
+.container {
   background: linear-gradient(113.96deg, #0090BD 13.6%, #140023 88.15%);
   background-color: transparent;
   height: 100vh;
@@ -116,8 +116,9 @@
   padding-top: 111px;
 }
 
+
 @media (max-width: 768px) {
-  .login-container {
+  .container {
     flex-direction: column;
   }
 

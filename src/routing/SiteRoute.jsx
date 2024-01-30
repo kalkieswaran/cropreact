@@ -53,7 +53,7 @@ const SiteRoute = () => {
   const loginLayoutChildren = () => {
     return (
       <LoginLayout >        
-        <Forgetpin/>
+        <Login/>
       </LoginLayout>
     );
   };
