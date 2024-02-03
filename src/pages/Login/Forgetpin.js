@@ -10,9 +10,9 @@ import  forget  from '../../assets/images/forget.png';
 const Forgetpin = () => {
   const { setLoading, setUser, openModal, closeModal, startSessionAct } = useSiteContext();
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
+  
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
+
 
   const handleLogin = () => {
     const data = { username: 'kminchelle', password: '0lelplR' };
@@ -28,90 +28,92 @@ const Forgetpin = () => {
     };
   };
 
-  const handleRememberMe = () => {
-    if (rememberMe) {
-      localStorage.setItem('rememberedEmail', email);
-    } else {
-      localStorage.removeItem('rememberedEmail');
-    }
-  };
-
-  useEffect(() => {
-    const rememberedEmail = localStorage.getItem('rememberedEmail');
-    if (rememberedEmail) {
-      setEmail(rememberedEmail);
-      setRememberMe(true);
-    }
-  }, []);
-
-  const handleForgetPassword = () => {
-    // Implement your forget password logic here
-  };
 
   const handleSignup = () => {
     navigate('/signup');
   };
+  const leftImage = () => {
+    return (
+      <>
+        <figure className="">
+          <img
+            src={forget}
+            alt="forget Logo"
+            className="image sign-image"
+          />
+        </figure>
+      </>
+    );
+  };
+
+  const ForgetpinForm = () => {
+    return (
+      <>
+        <div className="card login-card mb-5">
+          <figure className="crop-image is-flex is-justify-content-center">
+            <img src={croplogo} alt="Crop Logo" />
+          </figure>
+          <div className="login-title has-text-centered is-size-3  p-5">
+          Forget Pin
+          </div>
+          <div className="has-text-centered is-size-4 p-5 ">
+          Enter Your Credentials to Continue
+          </div>
+          <div className="fullform">
+            <div className="control login-radio p-5  is-flex">
+            <label className="radio">
+                <input type="radio" name="loginMethod" />
+                Crop ID
+              </label>
+              <label className="radio">
+                <input type="radio" name="loginMethod" />
+                Mobile
+              </label>
+              <label className="radio">
+                <input type="radio" name="loginMethod" />
+                Email
+              </label>
+            </div>
+            <div className="login-form is-flex is-justify-content-center is-flex-direction-column">
+              <div className="control p-5">
+                <input
+                  className="input login-input"
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              
+              </div>
+              <div className="field login-button is-flex is-justify-content-center p-6">
+                <button className="is-size-4" type="submit">
+                  Continue
+                </button>
+              </div>
+              <div className="field login-signup is-flex is-justify-content-center is-size-4">
+              Already have an Account?<Link to="/" className="login-sign" onClick={handleSignup}> Back to Login</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  };
+
 
   return (
 
-    <div className="container">
+    <>
+    <div className="container login-container is-fluid is-fullheight">
       <div className="columns is-vcentered">
-        <div className="left-column is-6  ">
-          <figure className="login-image ">
-            <img src={forget} alt="Login Logo" />
-          </figure>
+        <div className="column is-6">{leftImage()}</div>
+        <div className="column is-6">
+          {/* login form */}
+          {ForgetpinForm()}
         </div>
-        <div className="right-column  is-6 ">
-          <div className="box">
-            <figure className="login-image1">
-              <img src={croplogo} alt="Crop Logo" />
-            </figure><br/>
-            <h1 className="title is-4">Forget Pin</h1>
-           
-            <form onSubmit={handleLogin}>
-              <div className="radio-field">
-                <div className="radio-control">
-                <label className="radio-label">
-                    <input type="radio" name="loginMethod" />
-                    Crop ID
-                  </label>
-                  <label className="radio-label">
-                    <input type="radio" name="loginMethod" />
-                    Mobile
-                  </label> <label className="radio-label">
-                    <input type="radio" name="loginMethod" />
-                    Email
-                  </label>
-                </div>
-              </div><br/>
-               <div className="field">
-                <div className="control">
-                  <input
-                    className="input"
-                    type="password"
-                    placeholder="Crop ID"
-                    value={password}
-                    leftIcon="fa-lock"
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </div>
-              </div><br/>
-              <div className="button-field">
-                <div className="button-control">
-                  <button className="button-button" type="submit">
-                   Continue
-                  </button>
-                </div><br/>
-                <div className="field">
-             Already have an Account?<Link to="/" className="login-sign" onClick={handleSignup}> Back to Login
-                </Link>
-                </div>
-              </div>
-
-            </form>
-          </div>
-        </div>
-      </div> </div>
+      </div>
+    </div>
+  </>
   );
 };
 

@@ -1,116 +1,124 @@
-import React, { useState, useEffect } from 'react';
-import { useSiteContext } from '../../contexts/SiteProvider';
-import { post } from '../../services/smartApiService';
-import { Link, useNavigate } from 'react-router-dom';
-import croplogo from '../../assets/images/croplogo.png';
-import './Login.css'; // You can remove this if not needed
-import  signup  from '../../assets/images/signup.png';
-
+import React, { useState, useEffect } from "react";
+import { useSiteContext } from "../../contexts/SiteProvider";
+import { post } from "../../services/smartApiService";
+import { Link, useNavigate } from "react-router-dom";
+import croplogo from "../../assets/images/croplogo.png";
+import "./Login.css"; // You can remove this if not needed
+import signup from "../../assets/images/signup.png";
+import { SmartSoftInput } from "soft_digi";
 
 const Signup = () => {
-  const { setLoading, setUser, openModal, closeModal, startSessionAct } = useSiteContext();
+  const { setLoading, setUser, openModal, closeModal, startSessionAct } =
+    useSiteContext();
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
+  const [mobile, setmobile] = useState("");
+  const [password, setPassword] = useState("");
+
 
   const handleLogin = () => {
-    const data = { username: 'kminchelle', password: '0lelplR' };
-    setLoading(true, 'Logging in Please Wait....');
-    const subscription = post('auth/login', data).subscribe((response) => {
+    const data = { username: "kminchelle", password: "0lelplR" };
+    setLoading(true, "Logging in Please Wait....");
+    const subscription = post("auth/login", data).subscribe((response) => {
       setUser(response.data);
       setLoading(false);
       startSessionAct();
-      navigate('/');
+      navigate("/");
     });
     return () => {
       subscription.unsubscribe();
     };
   };
 
-  const handleRememberMe = () => {
-    if (rememberMe) {
-      localStorage.setItem('rememberedEmail', email);
-    } else {
-      localStorage.removeItem('rememberedEmail');
-    }
-  };
-
-  useEffect(() => {
-    const rememberedEmail = localStorage.getItem('rememberedEmail');
-    if (rememberedEmail) {
-      setEmail(rememberedEmail);
-      setRememberMe(true);
-    }
-  }, []);
-
-  const handleForgetPassword = () => {
-    // Implement your forget password logic here
-  };
-
   const handleSignup = () => {
-    navigate('/signup');
+    navigate("/signup");
+  };
+  const leftImage = () => {
+    return (
+      <>
+        <figure className="">
+          <img
+            src={signup}
+            alt="sign Logo"
+            className="image sign-image"
+          />
+        </figure>
+      </>
+    );
+  };
+
+  const SignupForm = () => {
+    return (
+      <>
+        <div className="card login-card mb-5">
+          <figure className="crop-image is-flex is-justify-content-center">
+            <img src={croplogo} alt="Crop Logo" />
+          </figure>
+          <div className="login-title has-text-centered is-size-3  p-5">
+          Sign Up
+          </div>
+          <div className="has-text-centered is-size-4 p-5 ">
+          Enter Your Credentials to Continue
+          </div>
+          <div className="fullform">
+            <div className="control login-radio p-5  is-flex">
+              <label className="radio">
+                <input type="radio" name="loginMethod" />
+                Mobile
+              </label>
+              <label className="radio">
+                <input type="radio" name="loginMethod" />
+                Email
+              </label>
+            </div>
+            <div className="login-form is-flex is-justify-content-center is-flex-direction-column">
+              <div className="control p-5">
+                <input
+                  className="input login-input"
+                  type="text"
+                  placeholder="mobile"
+                  value={mobile}
+                  onChange={(e) => setmobile(e.target.value)}
+                />
+              
+              </div>
+              <div className="field login-button is-flex is-justify-content-center p-6">
+                <button className="is-size-4" type="submit">
+                  Send OTP
+                </button>
+              </div>
+              <div className="field login-signup is-flex is-justify-content-center is-size-4">
+                Already have an Account?
+                <Link to="/" className="login-sign" onClick={handleSignup}>
+                  {" "}
+                  Login
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
   };
 
   return (
-
-    <div className="container">
+    <>
+    <div className="container login-container is-fluid is-fullheight">
       <div className="columns is-vcentered">
-        <div className="left-column is-6  ">
-          <figure className="signup-image ">
-            <img src={signup} alt="Login Logo" />
-          </figure>
+        <div className="column is-6">{leftImage()}</div>
+        <div className="column is-6">
+          {/* login form */}
+          {SignupForm()}
         </div>
-        <div className="right-column  is-6 ml-6 ">
-          <div className="box">
-            <figure className="login-image1">
-              <img src={croplogo} alt="Crop Logo" />
-            </figure><br/>
-            <h1 className="title is-4">Sign Up</h1>
-            <p className="title is-6">Enter  Your Credentials to Continue</p>
-            <form onSubmit={handleLogin}>
-              <div className="radio-field">
-                <div className="radio-control">
-                 
-                  <label className="radio-label">
-                    <input type="radio" name="loginMethod" />
-                    Mobile
-                  </label> <label className="radio-label">
-                    <input type="radio" name="loginMethod" />
-                    Email
-                  </label>
-                </div>
-              </div>
-               <div className="field">
-                <div className="control">
-                  <input
-                    className="input"
-                    type="number"
-                    placeholder="Mobile"
-                    value={password}
-                    leftIcon="fa-lock"
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </div>
-              </div>
-              <div className="button-field">
-                <div className="button-control">
-                  <button className="button-button" type="submit">
-                    Send OTP
-                  </button>
-                </div><br/>
-                <div className="signup-field">
-             Already have an Account?<Link to="/" className="login-sign" onClick={handleSignup}> Login
-                </Link>
-                </div>
-                
-              </div>
-
-            </form>
-          </div>
-        </div>
-      </div> </div>
+      </div>
+    </div>
+  </>
   );
 };
 
 export default Signup;
+/*
+  <SmartSoftInput 
+                  leftIcon="fa-user"
+                  placeHolder='hiiiiiii'
+                  
+                />*/

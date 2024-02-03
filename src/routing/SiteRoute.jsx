@@ -43,9 +43,7 @@ const SiteRoute = () => {
           <Route path="/pdftable" element={<Pdftable/>} />
           <Route path="/newform" element={<Pdfform/>} />
           <Route path="/pdfcal" element={<PdfCalendar/>} />
-          <Route path="/signup" element={<Signup/>} />
-          <Route path="/forgetpin" element={<Forgetpin/>} />
-          <Route path="/SmartLogin" element={<SmartLogin/>} />
+    
         </Routes>
       </MainLayout>
     );
@@ -74,7 +72,9 @@ const SiteRoute = () => {
           />
 
           <Route path="/home-button" element={<HomeButtons />} />
-          
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/forgetpin" element={<Forgetpin/>} />
+          <Route path="/SmartLogin" element={<SmartLogin/>} />
         </Routes>
       </Router>
       <ToastContainer />

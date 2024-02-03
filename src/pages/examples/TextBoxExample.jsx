@@ -116,6 +116,10 @@ const TextBoxExample = () => {
             onClick={()=>handleFormSubmit()}
             disabled={!isEmptyObject(formErrors)}
           />
+          <SmartSoftInput 
+          
+          
+           />
           </div>
         )
     }
