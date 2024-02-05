@@ -33,6 +33,13 @@ import MarketOffersTable from "../pages/Business/ManageService/MarketOffers/Mark
 import ServiceSettingsForm from "../pages/Business/ManageService/ServiceSettings/ServiceSettingsForm";
 import OfferCropsForm from "../pages/Business/ManageProgram/OfferCrops/OfferCropsForm";
 import ExtendBonusForm from "../pages/Business/ManageProgram/ExtendBonus/ExtendBonusForm";
+import SlashRedemptionForm from "../pages/Business/ManageProgram/SlashRedemption/SlashRedemptionForm";
+import HappyHoursForm from "../pages/Business/ManageProgram/HappyHours/HappyHoursForm";
+import OtherServiceForm from "../pages/Business/ManageProgram/OtherService/OtherServiceForm";
+import MyCropsTable from "../pages/Business/MyAccount/MyCrops/MyCropsTable";
+import MyCropsView from "../pages/Business/MyAccount/MyCrops/MyCropsView";
+import StatementForm from "../pages/Business/MyAccount/Statement/StatementForm";
+import MyCardFormview from "../pages/Business/MyAccount/MyCard/MyCardFormview";
 
 const SiteRoute = () => {
   const isAuthenticated = true;
@@ -86,9 +93,29 @@ const SiteRoute = () => {
           {/* Manage Program > Offers Crops */}
           <Route path="/offerscropsform" element={<OfferCropsForm />} />
 
-          {/* Manage Program > Extend Bonus */}
+          {/* Manage Program > Extend Bonus Crops */}
           <Route path="/extendbonusform" element={<ExtendBonusForm />} />
 
+          {/* Manage Program > Slash Redemption Crops */}
+          <Route path="/slashredemptionform" element={<SlashRedemptionForm />} />
+
+          {/* Manage Program > Happy Hours */}
+          <Route path="happyhoursform" element ={<HappyHoursForm />} />
+
+          {/* Manage Program > Other Services */}
+          <Route path='/otherserviceform' element={<OtherServiceForm />} />
+
+          {/* My Account >My Crops */}
+          <Route path="/mycropstable" element={<MyCropsTable />} />
+          <Route path="/mycropsview" element={<MyCropsView />} />
+
+          {/* My Account >Statement */}
+          <Route path="/statementform" element={<StatementForm />} />
+
+          {/* My Account >My Card */}
+          <Route path="/mycardformview" element={<MyCardFormview />} />
+          
+       
           
           
         
