@@ -19,6 +19,8 @@ import Forgetpin from "../pages/Login/Forgetpin";
 import HomeButtons from "../pages/Home/HomeButtons";
 import CreatePromosOfferForm from "../pages/Business/PromosButton/CreatePromosOfferForm";
 import MarketOfferForm from "../pages/Business/ManageService/MyOffers/MarketOfferForm";
+import Dashboard from "../pages/Business/Dashboard/Dashboard";
+import MyPromosTable from "../pages/Business/PromosButton/MyPromosTable";
 
 const SiteRoute = () => {
   const isAuthenticated = true;
@@ -33,6 +35,22 @@ const SiteRoute = () => {
           <Route path="modal" element={<ModalExample />} />   
         </Routes>
     </MainLayout>
+    )
+  }
+
+
+  const BusinessRoutes=()=>{
+    return (
+        
+        <Routes>
+          <Route path="/dashboard" element={< Dashboard />} />
+          <Route path="/mypromostable" element={< MyPromosTable />} />
+          <Route path="/CreatePromosOfferForm"  element={< CreatePromosOfferForm/>}/>
+          <Route path="/MarketOfferForm" element={<MarketOfferForm />} /> 
+         
+          
+        </Routes>
+  
     )
   }
 
@@ -73,13 +91,17 @@ const SiteRoute = () => {
             element={ exampleRoutes()}
           />
 
+          <Route 
+          path="/business/*"
+          element={BusinessRoutes()}
+          />
+
           <Route path="/home-button" element={<HomeButtons />} />
           <Route path="/signup" element={<Signup/>} />
           <Route path="/forgetpin" element={<Forgetpin/>} />
           <Route path="/SmartLogin" element={<SmartLogin/>} />
 
-          <Route path="/CreatePromosOfferForm"  element={< CreatePromosOfferForm/>}/>
-          <Route path="/MarketOfferForm" element={<MarketOfferForm />} /> 
+        
 
 
         </Routes>
