@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login";
 import MainLayout from "../themes/MainLayout";
@@ -43,7 +43,7 @@ import MyCardFormview from "../pages/Business/MyAccount/MyCard/MyCardFormview";
 import PinChangeForm from "../pages/Business/Settings/PinChange/PinChangeForm";
 
 const SiteRoute = () => {
-  const isAuthenticated = true;
+  // const isAuthenticated = true;
 
   const exampleRoutes=()=>{
     return (
