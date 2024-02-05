@@ -25,6 +25,7 @@ const MyPromosTable = () => {
   return (
     <>
   <div>
+   
     <SmartSoftTable columns={columns} data={data}/>
   </div>
   </>
