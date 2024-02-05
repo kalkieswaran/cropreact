@@ -40,6 +40,7 @@ import MyCropsTable from "../pages/Business/MyAccount/MyCrops/MyCropsTable";
 import MyCropsView from "../pages/Business/MyAccount/MyCrops/MyCropsView";
 import StatementForm from "../pages/Business/MyAccount/Statement/StatementForm";
 import MyCardFormview from "../pages/Business/MyAccount/MyCard/MyCardFormview";
+import PinChangeForm from "../pages/Business/Settings/PinChange/PinChangeForm";
 
 const SiteRoute = () => {
   const isAuthenticated = true;
@@ -113,7 +114,13 @@ const SiteRoute = () => {
           <Route path="/statementform" element={<StatementForm />} />
 
           {/* My Account >My Card */}
-          <Route path="/mycardformview" element={<MyCardFormview />} />        
+          <Route path="/mycardformview" element={<MyCardFormview />} />   
+
+          
+          {/* Settings >PinChange */}
+          <Route path="/pinchangeform" element={<PinChangeForm />} />   
+
+
        
           
         </Routes>
