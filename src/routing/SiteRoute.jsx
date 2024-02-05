@@ -21,6 +21,8 @@ import CreatePromosOfferForm from "../pages/Business/PromosButton/CreatePromosOf
 import MarketOfferForm from "../pages/Business/ManageService/MyOffers/MarketOfferForm";
 import Dashboard from "../pages/Business/Dashboard/Dashboard";
 import MyPromosTable from "../pages/Business/PromosButton/MyPromosTable";
+import RatedOffersTable from "../pages/Business/PromosButton/RatedOffersTable";
+import MyOffersTable from "../pages/Business/ManageService/MyOffers/MyOffersTable";
 
 const SiteRoute = () => {
   const isAuthenticated = true;
@@ -45,8 +47,11 @@ const SiteRoute = () => {
         <Routes>
           <Route path="/dashboard" element={< Dashboard />} />
           <Route path="/mypromostable" element={< MyPromosTable />} />
-          <Route path="/CreatePromosOfferForm"  element={< CreatePromosOfferForm/>}/>
-          <Route path="/MarketOfferForm" element={<MarketOfferForm />} /> 
+          <Route path="/createpromosofferform"  element={< CreatePromosOfferForm/>}/>
+          <Route path="/marketofferform" element={<MarketOfferForm />} /> 
+          <Route path="/ratedoffertable" element={<RatedOffersTable />} /> 
+          <Route path="/marketofferform" element={<MarketOfferForm />} /> 
+          <Route path="/myoffertable" element={<MyOffersTable />} /> 
          
           
         </Routes>
