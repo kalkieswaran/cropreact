@@ -60,7 +60,7 @@ const SiteRoute = () => {
 
   const BusinessRoutes=()=>{
     return (
-        
+      <MainLayout> 
         <Routes>
           {/* dashboard */}
           <Route path="/dashboard" element={< Dashboard />} />
@@ -113,17 +113,11 @@ const SiteRoute = () => {
           <Route path="/statementform" element={<StatementForm />} />
 
           {/* My Account >My Card */}
-          <Route path="/mycardformview" element={<MyCardFormview />} />
-          
+          <Route path="/mycardformview" element={<MyCardFormview />} />        
        
           
-          
-        
-        
-         
-         
-          
         </Routes>
+        </MainLayout> 
   
     )
   }
