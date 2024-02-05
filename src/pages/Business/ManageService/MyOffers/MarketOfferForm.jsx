@@ -67,7 +67,7 @@ const MarketOfferForm = () => {
      width:"6",
      name:"select_one",
      element:{
-       placeHolder:"Slot",
+       placeHolder:'Slot',
        options:options
      }
     },
