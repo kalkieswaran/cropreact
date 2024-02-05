@@ -168,7 +168,7 @@ const MarketOfferForm = () => {
         <SmartSoftButton
           label="View Offers"
           onClick={() => handleFormSubmit()}
-          classList={['m-3']}
+          classList={['m-3',]}
           // disabled={!isEmptyObject(formErrors)}
         />
          <SmartSoftButton
