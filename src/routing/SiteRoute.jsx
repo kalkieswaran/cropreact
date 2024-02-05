@@ -114,7 +114,9 @@ const SiteRoute = () => {
 
           {/* My Account >My Card */}
           <Route path="/mycardformview" element={<MyCardFormview />} />
-          
+
+          {/* Settings */}
+
        
           
           
@@ -176,7 +178,7 @@ const SiteRoute = () => {
           <Route path="/SmartLogin" element={<SmartLogin/>} />
 
         
-
+          <Route path="selectbox" element={<SelectBoxExample />} />  
 
         </Routes>
       </Router>
