@@ -18,6 +18,7 @@ import ModalExample from "../pages/examples/ModalExample";
 import Forgetpin from "../pages/Login/Forgetpin";
 import HomeButtons from "../pages/Home/HomeButtons";
 import CreatePromosOfferForm from "../pages/Business/PromosButton/CreatePromosOfferForm";
+import MarketOfferForm from "../pages/Business/ManageService/MyOffers/MarketOfferForm";
 
 const SiteRoute = () => {
   const isAuthenticated = true;
@@ -77,7 +78,8 @@ const SiteRoute = () => {
           <Route path="/forgetpin" element={<Forgetpin/>} />
           <Route path="/SmartLogin" element={<SmartLogin/>} />
 
-          <Route path="/CreatePromosOfferForm"  element={CreatePromosOfferForm}/>
+          <Route path="/CreatePromosOfferForm"  element={< CreatePromosOfferForm/>}/>
+          <Route path="/MarketOfferForm" element={<MarketOfferForm />} /> 
 
 
         </Routes>
