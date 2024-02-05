@@ -17,6 +17,7 @@ import SelectBoxExample from "../pages/examples/SelectBoxExample";
 import ModalExample from "../pages/examples/ModalExample";
 import Forgetpin from "../pages/Login/Forgetpin";
 import HomeButtons from "../pages/Home/HomeButtons";
+import CreatePromosOfferForm from "../pages/Business/PromosButton/CreatePromosOfferForm";
 
 const SiteRoute = () => {
   const isAuthenticated = true;
@@ -75,6 +76,10 @@ const SiteRoute = () => {
           <Route path="/signup" element={<Signup/>} />
           <Route path="/forgetpin" element={<Forgetpin/>} />
           <Route path="/SmartLogin" element={<SmartLogin/>} />
+
+          <Route path="/CreatePromosOfferForm"  element={CreatePromosOfferForm}/>
+
+
         </Routes>
       </Router>
       <ToastContainer />
