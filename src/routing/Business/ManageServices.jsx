@@ -1,8 +1,13 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { MyOffersTable } from '../../pages/Business';
 
 const ManageServices = () => {
-  return (
-    <div>ManageServices</div>
+  return ( 
+    <Routes>
+        <Route path="/my-offer-list" element={<MyOffersTable />} />      
+      </Routes>
+      
   )
 }
 

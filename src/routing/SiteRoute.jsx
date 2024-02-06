@@ -54,56 +54,57 @@ import TermsConditionView from "../pages/Business/ImportantInformation/TermsandC
 import PrivacyDataRightsView from "../pages/Business/ImportantInformation/PrivacyAndDataRights/PrivacyDataRightsView";
 import AppFAQsView from "../pages/Business/ImportantInformation/AppFAQs/AppFAQsView";
 import NotificationView from "../pages/Business/Notification/NotificationView";
+import BusinessRoute from "./Business/BusinessRoute";
 
 const SiteRoute = () => {
   // const isAuthenticated = true;
 
-  const exampleRoutes=()=>{
+  const exampleRoutes = () => {
     return (
-      <MainLayout>     
+      <MainLayout>
         <Routes>
-          <Route path="textbox" element={<TextBoxExample />} />  
-          <Route path="selectbox" element={<SelectBoxExample />} />  
-          <Route path="table" element={<TableExample />} />  
-          <Route path="modal" element={<ModalExample />} />   
+          <Route path="textbox" element={<TextBoxExample />} />
+          <Route path="selectbox" element={<SelectBoxExample />} />
+          <Route path="table" element={<TableExample />} />
+          <Route path="modal" element={<ModalExample />} />
         </Routes>
-    </MainLayout>
+      </MainLayout>
     )
   }
 
 
-  const BusinessRoutes=()=>{
+  const BusinessRoutes = () => {
     return (
-      <MainLayout> 
+      <MainLayout>
         <Routes>
           {/* dashboard */}
           <Route path="/dashboard" element={< Dashboard />} />
 
           {/* home  Button */}
-          <Route path="/homeview" element={<HomeView />} /> 
-          <Route path="/myprofileform" element={<MyProfileForm />} /> 
+          <Route path="/homeview" element={<HomeView />} />
+          <Route path="/myprofileform" element={<MyProfileForm />} />
 
           {/* Promos button*/}
           <Route path="/mypromostable" element={< MyPromosTable />} />
-          <Route path="/createpromosofferform"  element={< CreatePromosOfferForm/>}/>
-          <Route path="/ratedoffertable" element={<RatedOffersTable />} /> 
-          <Route path="/viewcomentscard" element={<ViewComentsCard />} /> 
-        
-           {/* Manage Services >My Offers  */}
-           <Route path="/myoffertable" element={<MyOffersTable />} /> 
-           <Route path="/myofferview" element={<MyOffersView />} /> 
-           <Route path="/marketofferform" element={<MarketOfferForm />} /> 
-           <Route path="/amendform" element={<AmendForm />} /> 
-       
-           {/* Manage Services >Create Offers  */}
-           <Route path="/createoffersform" element={<CreateOffersForm />} /> 
+          <Route path="/createpromosofferform" element={< CreatePromosOfferForm />} />
+          <Route path="/ratedoffertable" element={<RatedOffersTable />} />
+          <Route path="/viewcomentscard" element={<ViewComentsCard />} />
 
-           {/* Manage Services >Market Offers  */}
-           <Route path="/createofferstable" element={<MarketOffersTable />} /> 
+          {/* Manage Services >My Offers  */}
+          <Route path="/myoffertable" element={<MyOffersTable />} />
+          <Route path="/myofferview" element={<MyOffersView />} />
+          <Route path="/marketofferform" element={<MarketOfferForm />} />
+          <Route path="/amendform" element={<AmendForm />} />
 
-           {/* Manage Services >Service Settings  */}
-           <Route path="/servicesettingsform" element={<ServiceSettingsForm />} />
- 
+          {/* Manage Services >Create Offers  */}
+          <Route path="/createoffersform" element={<CreateOffersForm />} />
+
+          {/* Manage Services >Market Offers  */}
+          <Route path="/createofferstable" element={<MarketOffersTable />} />
+
+          {/* Manage Services >Service Settings  */}
+          <Route path="/servicesettingsform" element={<ServiceSettingsForm />} />
+
           {/* Manage Program > Offers Crops */}
           <Route path="/offerscropsform" element={<OfferCropsForm />} />
 
@@ -114,7 +115,7 @@ const SiteRoute = () => {
           <Route path="/slashredemptionform" element={<SlashRedemptionForm />} />
 
           {/* Manage Program > Happy Hours */}
-          <Route path="happyhoursform" element ={<HappyHoursForm />} />
+          <Route path="happyhoursform" element={<HappyHoursForm />} />
 
           {/* Manage Program > Other Services */}
           <Route path='/otherserviceform' element={<OtherServiceForm />} />
@@ -127,32 +128,32 @@ const SiteRoute = () => {
           <Route path="/statementform" element={<StatementForm />} />
 
           {/* My Account >My Card */}
-          <Route path="/mycardformview" element={<MyCardFormview />} />   
+          <Route path="/mycardformview" element={<MyCardFormview />} />
 
-          
+
           {/* Settings >PinChange */}
-          <Route path="/pinchangeform" element={<PinChangeForm />} />   
+          <Route path="/pinchangeform" element={<PinChangeForm />} />
 
           {/* Settings >Communications */}
-          <Route path="/communicationpreform" element={<CommunicationPreForm />} />   
+          <Route path="/communicationpreform" element={<CommunicationPreForm />} />
 
-          { /* More > Rating */ }
-          <Route path="/ratingtable" element={<RatingTable />} />   
-          <Route path="/ratingform" element={<RatingForm />} />   
+          { /* More > Rating */}
+          <Route path="/ratingtable" element={<RatingTable />} />
+          <Route path="/ratingform" element={<RatingForm />} />
 
-           {/* Help Button /Support  */}
-           <Route path="/contactusview" element={<ContactUsView />} />   
-           <Route path="/processmissingcropstable" element={<ProcessMissingCropsTable />} />  
+          {/* Help Button /Support  */}
+          <Route path="/contactusview" element={<ContactUsView />} />
+          <Route path="/processmissingcropstable" element={<ProcessMissingCropsTable />} />
 
-           {/* Help Button /Feedback  */}
-           <Route path="/appfeedbackform" element={<AppFeedbackForm />} />   
-           <Route path="/requestform" element={<RequestForm />} />  
-           <Route path="/complaintform" element={<ComplaintForm />} />   
+          {/* Help Button /Feedback  */}
+          <Route path="/appfeedbackform" element={<AppFeedbackForm />} />
+          <Route path="/requestform" element={<RequestForm />} />
+          <Route path="/complaintform" element={<ComplaintForm />} />
 
-          {/* Help Button /Important Information */} 
-          <Route path="/termsconditionsview" element={<TermsConditionView />} />   
-          <Route path="/privacydatarightsview" element={<PrivacyDataRightsView />} />   
-          <Route path="/appfaqsview" element={<AppFAQsView />} />   
+          {/* Help Button /Important Information */}
+          <Route path="/termsconditionsview" element={<TermsConditionView />} />
+          <Route path="/privacydatarightsview" element={<PrivacyDataRightsView />} />
+          <Route path="/appfaqsview" element={<AppFAQsView />} />
 
           {/* Notification */}
           <Route path="notificationview" element={<NotificationView />} />
@@ -160,27 +161,27 @@ const SiteRoute = () => {
 
 
 
-       
 
 
-       
-          
+
+
+
         </Routes>
-        </MainLayout> 
-  
+      </MainLayout>
+
     )
   }
 
   const mainRouteChildren = () => {
     return (
       <MainLayout>
-        <Routes>          
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Home />} />
-          <Route path="/pdftable" element={<Pdftable/>} />
-          <Route path="/newform" element={<Pdfform/>} />
-          <Route path="/pdfcal" element={<PdfCalendar/>} />
-    
+          <Route path="/pdftable" element={<Pdftable />} />
+          <Route path="/newform" element={<Pdfform />} />
+          <Route path="/pdfcal" element={<PdfCalendar />} />
+
         </Routes>
       </MainLayout>
     );
@@ -188,8 +189,8 @@ const SiteRoute = () => {
 
   const loginLayoutChildren = () => {
     return (
-      <LoginLayout >        
-        <Login/>
+      <LoginLayout >
+        <Login />
       </LoginLayout>
     );
   };
@@ -197,34 +198,38 @@ const SiteRoute = () => {
   return (
     <>
       <Router>
-        <Routes>         
-          <Route path="/" element={loginLayoutChildren()} />  
-          <Route 
-          path="/admin/*"
-          element={<AdminRoute />}
+        <Routes>
+          <Route path="/" element={loginLayoutChildren()} />
+          <Route
+            path="/admin/*"
+            element={<AdminRoute />}
+          />
+           <Route
+            path="/bussiness/*"
+            element={<BusinessRoute />}
           />
 
           <Route
             path="/site/*"
             element={<PrivateRoute> {mainRouteChildren()}</PrivateRoute>}
           />
-            <Route
+          <Route
             path="/examples/*"
-            element={ exampleRoutes()}
+            element={exampleRoutes()}
           />
 
-          <Route 
-          path="/business/*"
-          element={BusinessRoutes()}
+          <Route
+            path="/businessold/*"
+            element={BusinessRoutes()}
           />
-          
+
 
           <Route path="/home-button" element={<HomeButtons />} />
-          <Route path="/signup" element={<Signup/>} />
-          <Route path="/forgetpin" element={<Forgetpin/>} />
-          <Route path="/SmartLogin" element={<SmartLogin/>} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/forgetpin" element={<Forgetpin />} />
+          <Route path="/SmartLogin" element={<SmartLogin />} />
 
-        
+
 
 
         </Routes>

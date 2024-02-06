@@ -1,0 +1,25 @@
+/** bussinesss props **/
+.crop-bussiness-table-layout thead tr{
+    background-color: #57CFFA;    
+}
+.crop-bussiness-table-layout thead tr th{
+    color: white;
+    border-bottom: 2px solid #0053DF;  
+}
+.crop-bussiness-table-layout tbody tr:nth-child(even){
+    background:#DFF5FD; 
+}
+.crop-bussiness-table-layout .smart-edit-icon{
+   color:#6E74FF;
+   cursor: pointer;
+}
+.crop-bussiness-table-layout tbody tr:hover .smart-edit-icon{
+    color:#0053DF;
+}
+.crop-bussiness-table-layout .smart-delete-icon{
+    color:#FF7171;
+    cursor: pointer;
+ }
+ .crop-bussiness-table-layout tbody tr:hover .smart-delete-icon{
+     color:#FF0202;
+ }
