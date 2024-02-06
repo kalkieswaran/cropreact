@@ -42,6 +42,7 @@ import StatementForm from "../pages/Business/MyAccount/Statement/StatementForm";
 import MyCardFormview from "../pages/Business/MyAccount/MyCard/MyCardFormview";
 import AdminRoute from "./Admin/AdminRoute";
 import PinChangeForm from "../pages/Business/Settings/PinChange/PinChangeForm";
+import ProcessMissingCropsTable from "../pages/Business/Support/ProcessMissingCrops/ProcessMissingCropsTable";
 
 const SiteRoute = () => {
   // const isAuthenticated = true;
@@ -120,6 +121,9 @@ const SiteRoute = () => {
           
           {/* Settings >PinChange */}
           <Route path="/pinchangeform" element={<PinChangeForm />} />   
+
+
+          <Route path="/processmissingcropstable" element={<ProcessMissingCropsTable />} />  
 
 
        
