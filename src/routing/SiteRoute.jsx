@@ -44,6 +44,16 @@ import AdminRoute from "./Admin/AdminRoute";
 import PinChangeForm from "../pages/Business/Settings/PinChange/PinChangeForm";
 import ProcessMissingCropsTable from "../pages/Business/Support/ProcessMissingCrops/ProcessMissingCropsTable";
 import CommunicationPreForm from "../pages/Business/Settings/CommunicationPreference/CommunicationPreForm";
+import RatingTable from "../pages/Business/Rating/RatingTable";
+import RatingForm from "../pages/Business/Rating/RatingForm";
+import ContactUsView from "../pages/Business/Support/ContactUs/ContactUsView";
+import AppFeedbackForm from "../pages/Business/Feedback/AppFeedback/AppFeedbackForm";
+import RequestForm from "../pages/Business/Feedback/Request/RequestForm";
+import ComplaintForm from "../pages/Business/Feedback/Complaint/ComplaintForm";
+import TermsConditionView from "../pages/Business/ImportantInformation/TermsandConditions/TermsConditionView";
+import PrivacyDataRightsView from "../pages/Business/ImportantInformation/PrivacyAndDataRights/PrivacyDataRightsView";
+import AppFAQsView from "../pages/Business/ImportantInformation/AppFAQs/AppFAQsView";
+import NotificationView from "../pages/Business/Notification/NotificationView";
 
 const SiteRoute = () => {
   // const isAuthenticated = true;
@@ -126,9 +136,31 @@ const SiteRoute = () => {
           {/* Settings >Communications */}
           <Route path="/communicationpreform" element={<CommunicationPreForm />} />   
 
+          { /* More > Rating */ }
+          <Route path="/ratingtable" element={<RatingTable />} />   
+          <Route path="/ratingform" element={<RatingForm />} />   
+
+           {/* Help Button /Support  */}
+           <Route path="/contactusview" element={<ContactUsView />} />   
+           <Route path="/processmissingcropstable" element={<ProcessMissingCropsTable />} />  
+
+           {/* Help Button /Feedback  */}
+           <Route path="/appfeedbackform" element={<AppFeedbackForm />} />   
+           <Route path="/requestform" element={<RequestForm />} />  
+           <Route path="/complaintform" element={<ComplaintForm />} />   
+
+          {/* Help Button /Important Information */} 
+          <Route path="/termsconditionsview" element={<TermsConditionView />} />   
+          <Route path="/privacydatarightsview" element={<PrivacyDataRightsView />} />   
+          <Route path="/appfaqsview" element={<AppFAQsView />} />   
+
+          {/* Notification */}
+          <Route path="notificationview" element={<NotificationView />} />
 
 
-          <Route path="/processmissingcropstable" element={<ProcessMissingCropsTable />} />  
+
+
+       
 
 
        
