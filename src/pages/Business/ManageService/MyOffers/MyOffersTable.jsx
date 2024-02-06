@@ -7,7 +7,7 @@ const MyOffersTable = () => {
       label: "",
       leftIcon: "fa fa-eye",
       type: "icon",
-      classList: [""],
+      classList: ["has-text-info"],
       onClick: (data) => {
         console.log("data", data);
       },
@@ -18,7 +18,7 @@ const MyOffersTable = () => {
       label: "",
       leftIcon: "fa fa-archive",
       type: "icon",
-      classList: [""],
+      classList: ["has-text-primary"],
       onClick: (data) => {
         console.log("data", data);
       },
@@ -30,7 +30,7 @@ const MyOffersTable = () => {
       label: "",
       leftIcon: "fa fa-pencil-square-o",
       type: "icon",
-      classList: [""],
+      classList: ["has-text-success-dark"],
       onClick: (data) => {
         console.log("data", data);
       },
@@ -42,7 +42,7 @@ const MyOffersTable = () => {
       label: "",
       leftIcon: "fa fa-trash",
       type: "icon",
-      classList: [""],
+      classList: ["has-text-danger"],
       onClick: (data) => {
         console.log("data", data);
       },
@@ -50,7 +50,7 @@ const MyOffersTable = () => {
   ];
 
   const columns = [
-    { title: "S.No", index: "sno", isSortable: true, type: "sno" },
+    { title: "S.No", index: "sno", isSortable: true, type: "sno"},
     { title: "Image", index: "img", isSortable: true },
     { title: "Offer Title", index: "offertitle", isSortable: true },
     { title: "Qty", index: "qty", isSortable: true },
@@ -61,28 +61,24 @@ const MyOffersTable = () => {
     {
       title: "View",
       index: "view",
-     // isSortable: true,
       type: "buttons",
       buttons: viewbuttons,
     },
     {
       title: "Market",
       index: "martket",
-    //  isSortable: true,
       type: "buttons",
       buttons: martketbutton,
     },
     {
       title: "Amend",
       index: "amend",
-     // isSortable: true,
       type: "buttons",
       buttons: editbutton,
     },
     {
       title: "Remove",
       index: "remove",
-     // isSortable: true,
       type: "buttons",
       buttons: deletebutton,
     },
@@ -142,6 +138,11 @@ const MyOffersTable = () => {
   ];
   return (
     <>
+      <div>
+        <p className="has-text-info has-text-weight-bold is-size-5 pb-5 pl-3 pt-2">
+          My Offers
+        </p>
+      </div>
       <SmartSoftTable data={data} columns={columns} />
     </>
   );
