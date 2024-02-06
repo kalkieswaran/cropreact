@@ -1,0 +1,42 @@
+.side-nav-title{
+  display: flex;
+  justify-content:  space-between;
+}
+
+.list-items{
+  display: flex;
+ 
+}
+.main-side-nave-items{
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  
+}
+.side-nav-links{
+  display: none;
+ 
+}
+
+.side-nav-links-active{
+  display: block;
+
+}
+
+.visible{
+  display: block;
+
+}
+
+.hidden{
+  display: none;
+}
+
+.list-items{
+  padding: .5rem;
+  
+}
+.list-items:hover {
+  background-color: rgba(255,255, 255, .1);
+
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login";
 import MainLayout from "../themes/MainLayout";
@@ -40,9 +40,11 @@ import MyCropsTable from "../pages/Business/MyAccount/MyCrops/MyCropsTable";
 import MyCropsView from "../pages/Business/MyAccount/MyCrops/MyCropsView";
 import StatementForm from "../pages/Business/MyAccount/Statement/StatementForm";
 import MyCardFormview from "../pages/Business/MyAccount/MyCard/MyCardFormview";
+import AdminRoute from "./Admin/AdminRoute";
+import PinChangeForm from "../pages/Business/Settings/PinChange/PinChangeForm";
 
 const SiteRoute = () => {
-  const isAuthenticated = true;
+  // const isAuthenticated = true;
 
   const exampleRoutes=()=>{
     return (
@@ -60,7 +62,7 @@ const SiteRoute = () => {
 
   const BusinessRoutes=()=>{
     return (
-        
+      <MainLayout> 
         <Routes>
           {/* dashboard */}
           <Route path="/dashboard" element={< Dashboard />} />
@@ -85,7 +87,7 @@ const SiteRoute = () => {
            <Route path="/createoffersform" element={<CreateOffersForm />} /> 
 
            {/* Manage Services >Market Offers  */}
-           <Route path="/createoffersform" element={<MarketOffersTable />} /> 
+           <Route path="/createofferstable" element={<MarketOffersTable />} /> 
 
            {/* Manage Services >Service Settings  */}
            <Route path="/servicesettingsform" element={<ServiceSettingsForm />} />
@@ -113,17 +115,17 @@ const SiteRoute = () => {
           <Route path="/statementform" element={<StatementForm />} />
 
           {/* My Account >My Card */}
-          <Route path="/mycardformview" element={<MyCardFormview />} />
+          <Route path="/mycardformview" element={<MyCardFormview />} />   
+
           
+          {/* Settings >PinChange */}
+          <Route path="/pinchangeform" element={<PinChangeForm />} />   
+
+
        
           
-          
-        
-        
-         
-         
-          
         </Routes>
+        </MainLayout> 
   
     )
   }
@@ -155,7 +157,12 @@ const SiteRoute = () => {
     <>
       <Router>
         <Routes>         
-          <Route path="/" element={loginLayoutChildren()} />         
+          <Route path="/" element={loginLayoutChildren()} />  
+          <Route 
+          path="/admin/*"
+          element={<AdminRoute />}
+          />
+
           <Route
             path="/site/*"
             element={<PrivateRoute> {mainRouteChildren()}</PrivateRoute>}
@@ -169,6 +176,7 @@ const SiteRoute = () => {
           path="/business/*"
           element={BusinessRoutes()}
           />
+          
 
           <Route path="/home-button" element={<HomeButtons />} />
           <Route path="/signup" element={<Signup/>} />
