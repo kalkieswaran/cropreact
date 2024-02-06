@@ -11,6 +11,9 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
+  transition: .5s ease-out;
+  cursor: pointer;
+  
   
 }
 .side-nav-links{
@@ -32,11 +35,31 @@
   display: none;
 }
 
-.list-items{
+.side-nav-display-items{
   padding: .5rem;
+  margin-left: 15px;
+  transition: .5s ease-out;
   
 }
-.list-items:hover {
+.side-nav-display-items:hover {
   background-color: rgba(255,255, 255, .1);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 
+}
+.side-nav-content{
+  margin: 10px 0px;
+  color: #E2E0E0;
+  transition: .5s ease-out;
+}
+
+          
+
+.list-item-active{
+  background-color: red;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color:#0053DF;
+  background-color: white;
+  margin-left: 15px;
 }
