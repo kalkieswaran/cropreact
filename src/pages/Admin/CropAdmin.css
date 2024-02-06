@@ -1,0 +1,55 @@
+/** table buttons ***/
+.crop-table-layout{
+
+}
+.crop-table-layout thead tr{
+    background-color: #57CFFA;    
+}
+.crop-table-layout thead tr th{
+    color: white;
+    border-bottom: 2px solid #0053DF;  
+}
+.crop-table-layout tbody tr:nth-child(even){
+    background:#DFF5FD; 
+}
+.crop-table-layout .smart-edit-icon{
+   color:#6E74FF;
+   cursor: pointer;
+}
+.crop-table-layout tbody tr:hover .smart-edit-icon{
+    color:#0053DF;
+}
+.crop-table-layout .smart-delete-icon{
+    color:#FF7171;
+    cursor: pointer;
+ }
+ .crop-table-layout tbody tr:hover .smart-delete-icon{
+     color:#FF0202;
+ }
+
+ /** admin head navigations **/
+ .crop-table-top-pagination{
+    padding-right:5em;
+ }
+.crop-table-top-pagination i{   
+    font-size: 1.8em;
+    margin-right:0.5em;
+    color:#0053DF;
+}
+
+/***  crop admin title ***/
+.crop-admin-table-title{
+    color:#171B1E;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Cairo', sans-serif;
+}
+.crop-admin-table-back{
+    text-align: center;
+}
+.crop-admin-table-back span{
+    padding:1em;
+    background-color: #a5c2dc;
+    color:#2B91EC;
+    border-radius: 0.5em;
+}
