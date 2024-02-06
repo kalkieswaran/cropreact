@@ -188,7 +188,7 @@ const AmendForm = () => {
          <SmartSoftButton
           label="Upload Product Images"
           onClick={() => handleFormSubmit()}
-          classList={['m-3']}
+          classList={['m-3',"is-primary", "is-small"]}
           // disabled={!isEmptyObject(formErrors)}
         />
 
@@ -212,6 +212,7 @@ const AmendForm = () => {
         <SmartSoftButton
           label="Submit"
           onClick={() => handleFormSubmit()}
+          classList={["is-primary", "is-small", "is-rounded"]}
           // disabled={!isEmptyObject(formErrors)}
         />
         </div>
@@ -220,13 +221,13 @@ const AmendForm = () => {
         <SmartSoftButton
           label="View Offers"
           onClick={() => handleFormSubmit()}
-          classList={['m-3']}
+          classList={['m-3',"is-primary", "is-small", "is-rounded"]}
           // disabled={!isEmptyObject(formErrors)}
         />
          <SmartSoftButton
           label="Market Offers"
           onClick={() => handleFormSubmit()}
-          classList={['m-3']}
+          classList={['m-3',"is-primary", "is-small", "is-rounded"]}
           // disabled={!isEmptyObject(formErrors)}
         />
         </div>

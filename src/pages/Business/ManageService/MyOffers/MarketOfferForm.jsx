@@ -139,6 +139,7 @@ const MarketOfferForm = () => {
            <SmartSoftButton
           label="Cancel"
           onClick={() => handleFormSubmit()}
+          classList={[ "is-small", "is-rounded"]}
           // disabled={!isEmptyObject(formErrors)}
         />
         </div>
@@ -160,6 +161,7 @@ const MarketOfferForm = () => {
         <SmartSoftButton
           label="Submit"
           onClick={() => handleFormSubmit()}
+          classList={["is-primary", "is-small", "is-rounded"]}
           // disabled={!isEmptyObject(formErrors)}
         />
         </div>
@@ -168,13 +170,13 @@ const MarketOfferForm = () => {
         <SmartSoftButton
           label="View Offers"
           onClick={() => handleFormSubmit()}
-          classList={['m-3',]}
+          classList={['m-3',"is-primary", "is-small", "is-rounded"]}
           // disabled={!isEmptyObject(formErrors)}
         />
          <SmartSoftButton
           label="Amend Offers"
           onClick={() => handleFormSubmit()}
-          classList={['m-3']}
+          classList={['m-3',"is-primary", "is-small", "is-rounded"]}
           // disabled={!isEmptyObject(formErrors)}
         />
         </div>
