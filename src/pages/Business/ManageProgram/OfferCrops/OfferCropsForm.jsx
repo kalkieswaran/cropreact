@@ -27,7 +27,7 @@ const OfferCropsForm = () => {
          <SmartSoftButton
           label="Scan"
           onClick={() => handleFormSubmit()}
-          classList={['m-3']}
+          classList={['m-3',"is-primary", "is-small", "is-rounded"]}
           // disabled={!isEmptyObject(formErrors)}
         />
 

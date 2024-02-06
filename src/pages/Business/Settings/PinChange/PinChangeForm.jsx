@@ -50,7 +50,7 @@ const PinChangeForm = () => {
   const formElements = [
     {
       type:"TEXT_BOX",
-      width:"6",
+      width:"12",
       name:"input_one",
       element:{
         placeHolder:"Enter Old Pin",
@@ -60,7 +60,7 @@ const PinChangeForm = () => {
 
      {
       type:"TEXT_BOX",
-      width:"6",
+      width:"12",
       name:"input_one",
       element:{
         placeHolder:"Enter New Pin",
@@ -70,7 +70,7 @@ const PinChangeForm = () => {
   
      {
       type:"TEXT_BOX",
-      width:"6",
+      width:"12",
       name:"input_one",
       element:{
         placeHolder:"Confirm New Pin",
@@ -93,7 +93,8 @@ const PinChangeForm = () => {
      
       <hr/>
       
-      <div className='column multiline is-flex'>
+      <div className='columns'>
+      <div className='column is-4 is-flex is-flex-direction-column'>
       <SmartSoftForm
            formData={formData} 
           setFormData={handleInputChange} 
@@ -101,6 +102,11 @@ const PinChangeForm = () => {
           formSubmit={formSubmit}
           handleErrorChange={handleErrorChange}
          />
+      </div>
+      <div className='column-6 is-flex flex-direction-column'>
+        
+
+      </div>
       </div>
       
       <div className='is-justify-content-center'>
@@ -110,7 +116,7 @@ const PinChangeForm = () => {
           // disabled={!isEmptyObject(formErrors)}
         />
       </div>
-
+      
         
 
        
