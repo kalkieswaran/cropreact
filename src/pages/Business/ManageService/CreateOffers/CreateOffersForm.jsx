@@ -55,70 +55,65 @@ const CreateOffersForm = () => {
   const formElements = [
     {
       type: "TEXT_BOX",
-      width: "4",
+      width: "6",
       name: "input_one",
-      element: { placeHolder: 'Title', validations: numericValidations }
+      element: { placeHolder: 'Uploade Product Image', validations: numericValidations }
     },
     {
       type: "TEXT_BOX",
-      width: "4",
+      width: "6",
       name: "input_two",
-      element: { placeHolder: 'Brand', validations: numericValidations }
+      element: { placeHolder: 'Title ', validations: numericValidations }
     },
     {
       type: "SELECT_BOX",
-      width: "4",
+      width: "6",
       name: "select_three",
       element: { placeHolder: 'Sector ', options: options }
     },
     {
       type: "SELECT_BOX",
-      width: "4",
+      width: "6",
       name: "select_four",
       element: { placeHolder: 'Apply', options: options }
     },
     {
-      type: "TEXT_BOX",
-      width: "4",
+      type: "SELECT_BOX",
+      width: "6",
       name: "input_five",
-      element: { placeHolder: 'Original Price', validations: numericValidations }
+      element: { placeHolder: 'Quantity', options: options }
     },
     {
       type: "TEXT_BOX",
-      width: "4",
+      width: "6",
       name: "input_six",
-      element: { placeHolder: 'Discount Percentage', validations: numericValidations }
-    },
-    {
-      type: "TEXT_BOX",
-      width: "4",
-      name: "input_seven",
-      element: { placeHolder: 'Quentity', validations: numericValidations }
-    },
-    {
-      type: "TEXT_BOX",
-      width: "4",
-      name: "input_eight",
       element: { placeHolder: 'Product Available From Date', validations: numericValidations }
     },
     {
       type: "TEXT_BOX",
-      width: "4",
+      width: "6",
+      name: "input_seven",
+      element: { placeHolder: 'Product Available to Date', validations: numericValidations }
+    },
+    {
+      type: "TEXT_BOX",
+      width: "6",
+      name: "input_eight",
+      element: { placeHolder: 'Brief Description', validations: numericValidations }
+    },
+    {
+      type: "TEXT_BOX",
+      width: "6",
       name: "input_nine",
       element: { placeHolder: 'Detailed Description', validations: numericValidations }
     },
     {
       type: "TEXT_BOX",
-      width: "4",
+      width: "6",
       name: "input_ten",
-      element: { placeHolder: 'Brief Description', validations: numericValidations }
+      element: { placeHolder: 'Customize Message', validations: numericValidations }
     },
-    {
-      type: "TEXT_BOX",
-      width: "4",
-      name: "input_eleven",
-      element: { placeHolder: 'Brief Description', validations: numericValidations }
-    },
+
 
   ]
 
@@ -127,7 +122,7 @@ const CreateOffersForm = () => {
       <div className='header is-size-5 has-text-link'>
         <i class="fa fa-caret-square-o-left ml-3 mr-5 " aria-hidden="true"></i>
 
-        Amend Products
+        Create Offer
 
       </div>
       <hr />
@@ -138,22 +133,11 @@ const CreateOffersForm = () => {
         handleErrorChange={handleErrorChange} />
 
 
-      <div className='is-justify-content-space-between is-flex'>
-        <span> <SmartSoftButton
-          label="submit"
+      <div className='is-justify-content-end  is-flex'>
+        <SmartSoftButton
+          label="Submit"
           classList={["is-primary", "is-small", "is-rounded"]}
         />
-        </span>
-        <span>
-          <SmartSoftButton
-            label="View Offers"
-            classList={["is-primary", "is-small", "is-rounded"]}
-          />
-          <SmartSoftButton
-            label="Moeket Offer"
-            classList={["is-primary", "is-small", "is-rounded"]}
-          />
-        </span>
       </div>
     </div>
   )

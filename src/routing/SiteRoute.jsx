@@ -96,9 +96,7 @@ const SiteRoute = () => {
            <Route path="/amendform" element={<AmendForm />} /> 
        
            {/* Manage Services >Create Offers  */}
-           <Route path="/creat
-           
-           eoffersform" element={<CreateOffersForm />} /> 
+           <Route path="/createoffersform" element={<CreateOffersForm />} /> 
 
            {/* Manage Services >Market Offers  */}
            <Route path="/createofferstable" element={<MarketOffersTable />} /> 
