@@ -5,6 +5,9 @@
 .smart-crop-sidenav{
     position: fixed;
     width:200px;
+    height: 100%;
+    overflow: auto;
+    color: white;
 }
 .smart-crop-middle{
     background-color: #ffffff;
@@ -26,3 +29,12 @@
     border-radius: 20px;
     padding:10px;
 }
+
+.crops-logo{
+    width: 75%;
+    height: 75%;
+}
+
+
+/* side Nav */
+
