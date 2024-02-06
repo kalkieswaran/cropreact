@@ -30,7 +30,7 @@ const MyOffersTable = () => {
       label: "",
       leftIcon: "fa fa-pencil-square-o",
       type: "icon",
-      classList: ["has-text-success-dark"],
+      classList: ["smart-edit-icon"],
       onClick: (data) => {
         console.log("data", data);
       },
@@ -143,7 +143,7 @@ const MyOffersTable = () => {
           My Offers
         </p>
       </div>
-      <SmartSoftTable data={data} columns={columns} />
+      <SmartSoftTable data={data} columns={columns} tableProps={{className:"crop-bussiness-table-layout"}} />
     </>
   );
 };
