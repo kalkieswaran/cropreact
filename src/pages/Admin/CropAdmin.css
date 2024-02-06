@@ -53,3 +53,41 @@
     color:#2B91EC;
     border-radius: 0.5em;
 }
+
+/**  admin buttons ***/
+.crop-admin-secondary-button{
+    background: #A1E5FD;   
+}
+/*** crop admin title ***/
+.crop-admin-form-title{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.crop-admin-action-button{
+    padding-left:2em !important;
+    padding-right:2em !important;
+    background: #58CFFA;
+    color:#ffffff;
+}
+.crop-admin-modal-close{  
+    background-color: #ffffff;
+    padding: 15px;
+    width: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.crop-admin-modal-close i{
+    font-size: 1.3em;
+    color:#838383;
+}
+
+
+/** modal class **/
+.crop-admin-modal .modal-card-body{
+    background: none;
+}
+.crop-admin-modal-content{
+    border-radius: 20px;
+}
