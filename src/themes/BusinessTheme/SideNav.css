@@ -36,18 +36,24 @@
   display: none;
 }
 
-.side-nav-display-items{
-  padding: .5rem;
-  margin-left: 15px;
-  transition: .5s ease-out;
-  
-}
-.side-nav-display-items:hover {
+.list-items:hover{
   background-color: rgba(255,255, 255, .1);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 
+  
 }
+.side-nav-display-items{
+  padding: .5rem;
+  margin-left: 15px;
+  transition: .5s ease-out;
+  font-size: .75rem;
+ 
+ 
+  
+}
+
+
 .side-nav-content{
   margin: 10px 0px;
   color: #E2E0E0;
@@ -64,4 +70,7 @@
   background-color: white;
   margin-left: 10px;
  
+}
+.side-list-heading{
+  font-size: .80em;
 }

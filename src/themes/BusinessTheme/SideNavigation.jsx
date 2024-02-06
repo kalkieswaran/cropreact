@@ -60,7 +60,7 @@ const  ManageServices=()=>{
           className={location.pathname === item.link ? 'list-item-active' : 'list-items '}>
             <div className='is-flex py-2 ml-3 side-nav-display-items my-1'>
             <div className='side-nav-icon px-2 '>{item.icon}</div>
-            <p className='item-text is-size-6'>{item.label}</p>
+            <p className='item-text '>{item.label}</p>
             </div>
         
           </li>
@@ -136,7 +136,7 @@ const ManageProgram =()=>{
           className={location.pathname === item.link ? 'list-item-active' : 'list-items '}>
             <div className='is-flex py-2 ml-3 side-nav-display-items my-1'>
             <div className='side-nav-icon px-2 '>{item.icon}</div>
-            <p className='item-text is-size-6'>{item.label}</p>
+            <p className='item-text '>{item.label}</p>
             </div>
         
           </li>
@@ -198,7 +198,7 @@ const MyAccount =() =>{
             className={location.pathname === item.link ? 'list-item-active' : 'list-items '}>
             <div className='is-flex py-2 ml-3 side-nav-display-items my-1'>
             <div className='side-nav-icon px-2 '>{item.icon}</div>
-            <p className='item-text is-size-6'>{item.label}</p>
+            <p className='item-text '>{item.label}</p>
             </div>
         
           </li>
@@ -245,7 +245,7 @@ const Settings = ()=>{
     <>
  <div className='side-nav-content'>
       <div className='side-nav-title ' onClick={toggleSidebar} >
-       <p className='side-list-heading ml-4'>SETTINGS</p> 
+       <p className='side-list-heading  ml-4'>SETTINGS</p> 
        <i class="fa fa-caret-down mr-3 mt-1" aria-hidden="true"></i>
          </div>
          <ul className={`side-nav-links ${sidebarOpen ? 'visible' : 'hidden'}`}>
@@ -256,7 +256,7 @@ const Settings = ()=>{
           className={location.pathname === item.link ? 'list-item-active' : 'list-items '}>
             <div className='is-flex py-2 ml-3 side-nav-display-items my-1'>
             <div className='side-nav-icon px-2 '>{item.icon}</div>
-            <p className='item-text is-size-6'>{item.label}</p>
+            <p className='item-text '>{item.label}</p>
             </div>
         
           </li>
